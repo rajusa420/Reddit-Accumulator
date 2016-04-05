@@ -61,8 +61,22 @@ class RedditAPI :
         for subreddit in self.subreddits:
             pprint.pprint(subreddit)
 
+    def getNewPostsToSubreddit(self, subredditURLName):
+        subredditNewPostsURL = "https://oauth.reddit.com" + subredditURLName + "new.json?sort=new&limit=10"
+        response = self.redditRequest(subredditNewPostsURL)
+        subredditDataResponseJson = response.json()
+        if subredditDataResponseJson["kind"] == "Listing":
+            for subreddit in subredditDataResponseJson["data"]["children"]:
+                info = subreddit["data"]
+                pprint.pprint(info["title"] + ": " + str(info["score"]))
+
+    def subredditTest(self):
+        self.getNewPostsToSubreddit(self.subreddits[-1])
+
 redditAPI = RedditAPI()
 redditAPI.redditAuth()
 #redditAPI.redditRequestUserData()
 redditAPI.redditRequestSubredditData()
-redditAPI.printSubreddits()
+redditAPI.subredditTest()
+
+#redditAPI.printSubreddits()
