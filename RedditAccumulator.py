@@ -30,9 +30,15 @@ class RedditAPI :
         return
 
     def redditRequest(self, url):
-        # At some point add error retry for auth
-        response = self.client.get(url, headers=self.headers)
-        return response
+        # At some point save token expiration and know when to reauth
+        retry = 0
+        while retry < 3:
+            response = self.client.get(url, headers=self.headers)
+            if response.status_code == 403:
+                retry = retry + 1
+                self.redditAuth()
+            else:
+                return response
 
     def redditRequestUserData(self) :
         response = self.redditRequest("https://oauth.reddit.com/api/v1/me")
