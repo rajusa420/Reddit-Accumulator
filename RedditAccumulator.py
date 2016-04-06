@@ -11,16 +11,22 @@ class RedditAPI :
 
     def redditAuth(self) :
         username = "rajusa"
-        password = os.environ["REDDITPASS"]
-        app_id = os.environ["REDDIT_APP_ID"]
-        app_secret = os.environ["REDDIT_APP_SECRET"]
+        password = os.getenv("REDDIT_PASS")
+        app_id = os.getenv("REDDIT_APP_ID")
+        app_secret = os.getenv("REDDIT_APP_SECRET")
 
         client_auth = requests.auth.HTTPBasicAuth(app_id, app_secret)
         post_data = {"grant_type": "password", "username": username, "password": password}
 
         response = self.client.post(r"https://www.reddit.com/api/v1/access_token", auth=client_auth, data=post_data, headers=self.headers)
         authResponseJson = response.json()
-        self.headers["Authorization"] = authResponseJson["token_type"] + " " + authResponseJson["access_token"]
+        if response.status_code == 200:
+            if "token_type" in authResponseJson and "access_token" in authResponseJson:
+                self.headers["Authorization"] = authResponseJson["token_type"] + " " + authResponseJson["access_token"]
+            else:
+                pprint.pprint("Auth response does not contain expected keys")
+        else:
+            pprint.pprint("Auth request returned status code:" + str(response.status_code))
         return
 
     def redditRequest(self, url):
@@ -46,14 +52,19 @@ class RedditAPI :
             subredditURL = self.redditRequestSubredditDataURLBuilder(after)
             response = self.redditRequest(subredditURL)
             #pprint.pprint(response.content)
-            subredditResponseJson = response.json()
-            after = subredditResponseJson["data"]["after"]
-            #pprint.pprint(after)
-            if subredditResponseJson["kind"] == "Listing":
-                for subreddit in subredditResponseJson["data"]["children"]:
-                    info = subreddit["data"]
-                    self.subreddits.append(info["url"])
-            if (after is None or len(after) == 0):
+            if response.status_code == 200:
+                subredditResponseJson = response.json()
+                if "data" in subredditResponseJson:
+                    after = subredditResponseJson["data"]["after"]
+                    #pprint.pprint(after)
+                    if subredditResponseJson["kind"] == "Listing":
+                        for subreddit in subredditResponseJson["data"]["children"]:
+                            info = subreddit["data"]
+                            self.subreddits.append(info["url"])
+                    if (after is None or len(after) == 0):
+                        break
+            else:
+                pprint.pprint("Request subreddit data returned status code:" + str(response.status_code))
                 break
         return
 
@@ -64,14 +75,18 @@ class RedditAPI :
     def getNewPostsToSubreddit(self, subredditURLName):
         subredditNewPostsURL = "https://oauth.reddit.com" + subredditURLName + "new.json?sort=new&limit=10"
         response = self.redditRequest(subredditNewPostsURL)
-        subredditDataResponseJson = response.json()
-        if subredditDataResponseJson["kind"] == "Listing":
-            for subreddit in subredditDataResponseJson["data"]["children"]:
-                info = subreddit["data"]
-                pprint.pprint(info["title"] + ": " + str(info["score"]))
+        if response.status_code == 200:
+            subredditDataResponseJson = response.json()
+            if subredditDataResponseJson["kind"] == "Listing":
+                for subreddit in subredditDataResponseJson["data"]["children"]:
+                    info = subreddit["data"]
+                    pprint.pprint(info["title"] + ": " + str(info["score"]))
+        else:
+            pprint.pprint("Request for new posts returned status code:" + str(response.status_code))
 
     def subredditTest(self):
-        self.getNewPostsToSubreddit(self.subreddits[-1])
+        if len(self.subreddits) > 0:
+            self.getNewPostsToSubreddit(self.subreddits[-1])
 
 redditAPI = RedditAPI()
 redditAPI.redditAuth()
