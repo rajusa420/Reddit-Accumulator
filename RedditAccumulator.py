@@ -3,8 +3,9 @@ import requests.auth
 import json
 import os
 import pprint
+from RedditAccumulatorDatabase import RedditAccumulatorDatabase
 
-class RedditAPI :
+class RedditAPI:
     client = requests.session()
     headers = {"User-Agent": "Awesome Stuff to Read 1.0 by /u/rajusa"}
     subreddits = []
@@ -52,7 +53,7 @@ class RedditAPI :
         return requestURL
 
     def redditRequestSubredditData(self) :
-        self.subreddits.clear()
+        self.subreddits[:] = []
         after = ""
         while True:
             subredditURL = self.redditRequestSubredditDataURLBuilder(after)
@@ -101,3 +102,5 @@ redditAPI.redditRequestSubredditData()
 redditAPI.subredditTest()
 
 #redditAPI.printSubreddits()
+redditDB = RedditAccumulatorDatabase()
+redditDB.connect()
