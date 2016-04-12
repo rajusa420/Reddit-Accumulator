@@ -48,7 +48,7 @@ class RedditAccumulatorDatabase:
 
     def saveArticle(self, name, title, url, score, subreddit):
         try:
-            query = "INSERT INTO \"RedditTopPosts\" (name, title, url, score, date, subreddit) VALUES (%s, %s, %s, %s, %s, %s)"
+            query = "INSERT INTO \"RedditTopPosts\" (name, title, url, score, date, subreddit) VALUES (%s, %s, %s, %s, %s, %s) ON CONFLICT DO NOTHING"
             self.cursor.execute(query, (name, title, url, score, "now", subreddit))
             self.connection.commit()
         except psycopg2.DatabaseError as e:
@@ -57,16 +57,40 @@ class RedditAccumulatorDatabase:
 
     def getArticlesForSubreddit(self, subreddit):
         try:
-            self.cursor.execute("SELECT * FROM \"RedditTopPosts\" where subreddit=%s", (subreddit))
+            self.cursor.execute("SELECT * FROM \"RedditTopPosts\" where subreddit=%s", (subreddit,))
             return self.cursor.fetchall
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)
 
     def getArticleCountForSubreddit(self, subreddit):
         try:
-            self.cursor.execute("SELECT COUNT(id) FROM \"RedditTopPosts\" where subreddit=%s", (subreddit))
+            self.cursor.execute("SELECT COUNT(id) FROM \"RedditTopPosts\" where subreddit=%s", (subreddit,))
             countRecord = self.cursor.fetchone()
             return countRecord[0]
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)
 
+    def saveAverageScore(self, score, subreddit):
+        try:
+            query = "INSERT INTO \"SubredditAverageScore\" (score, subreddit, lastupdated) VALUES (%s, %s, %s)"
+            self.cursor.execute(query, (score, subreddit, "now"))
+            self.connection.commit()
+        except psycopg2.DatabaseError as e:
+            print('Error %s' % e)
+            self.connection.rollback()
+
+    def getAverageScoreLastUpdated(self, subreddit):
+        try:
+            self.cursor.execute("SELECT lastupdated FROM \"SubredditAverageScore\" where subreddit = %s", (subreddit,))
+            countRecord = self.cursor.fetchone()
+            return countRecord[0]
+        except psycopg2.DatabaseError as e:
+            print('Error %s' % e)
+
+    def getAverageScore(self, subreddit):
+        try:
+            self.cursor.execute("SELECT score FROM \"SubredditAverageScore\" where subreddit = %s", (subreddit,))
+            countRecord = self.cursor.fetchone()
+            return countRecord[0]
+        except psycopg2.DatabaseError as e:
+            print('Error %s' % e)
