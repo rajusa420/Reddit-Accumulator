@@ -46,10 +46,10 @@ class RedditAccumulatorDatabase:
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)
 
-    def saveArticle(self, name, title, url, score, subreddit):
+    def saveArticle(self, name, title, url, score, subreddit, commentURL):
         try:
-            query = "INSERT INTO \"RedditTopPosts\" (name, title, url, score, date, subreddit) VALUES (%s, %s, %s, %s, %s, %s) ON CONFLICT DO NOTHING"
-            self.cursor.execute(query, (name, title, url, score, "now", subreddit))
+            query = "INSERT INTO \"RedditTopPosts\" (name, title, url, score, date, subreddit, commenturl) VALUES (%s, %s, %s, %s, %s, %s, %s) ON CONFLICT DO NOTHING"
+            self.cursor.execute(query, (name, title, url, score, "now", subreddit, commentURL))
             self.connection.commit()
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)

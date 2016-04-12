@@ -55,8 +55,10 @@ class RedditAccumulator:
                         title = data["title"]
                         url = data["url"]
                         name = data["name"]
+                        permalink = data["permalink"]
+                        commentURL = "https://www.reddit.com" + permalink
                         pprint.pprint(data["title"] + ": " + str(score) + "(" + subReddit + ")")
-                        self.redditDB.saveArticle(name, title, url, score, subReddit)
+                        self.redditDB.saveArticle(name, title, url, score, subReddit, commentURL)
             else:
                 pprint.pprint("Failed to get top posts for subreddit: " + subReddit)
         pprint.pprint("Total posts Found: " + str(postCounter))
