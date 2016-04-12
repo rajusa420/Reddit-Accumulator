@@ -9,6 +9,7 @@ class RedditAPI:
     client = requests.session()
     headers = {"User-Agent": "Awesome Stuff to Read 1.0 by /u/rajusa"}
     subreddits = []
+    subredditUserCount = {}
 
     def redditAuth(self) :
         username = "rajusa"
@@ -67,7 +68,9 @@ class RedditAPI:
                     if subredditResponseJson["kind"] == "Listing":
                         for subreddit in subredditResponseJson["data"]["children"]:
                             info = subreddit["data"]
-                            self.subreddits.append(info["url"])
+                            subredditURL = info["url"]
+                            self.subreddits.append(subredditURL)
+                            self.subredditUserCount[subredditURL] = info["subscribers"]
                     if (after is None or len(after) == 0):
                         break
             else:
@@ -79,8 +82,10 @@ class RedditAPI:
         for subreddit in self.subreddits:
             pprint.pprint(subreddit)
 
-    def getNewPostsToSubreddit(self, subredditURLName):
-        subredditNewPostsURL = "https://oauth.reddit.com" + subredditURLName + "new.json?sort=new&limit=10"
+    def getNewTopPostsToSubreddit(self, subredditURLName):
+        subscriberCount = self.subredditUserCount[subredditURLName]
+        pprint.pprint(subredditURLName + ": " + str(subscriberCount))
+        subredditNewPostsURL = "https://oauth.reddit.com" + subredditURLName + "top.json?sort=top&t=day&limit=10"
         response = self.redditRequest(subredditNewPostsURL)
         if response.status_code == 200:
             subredditDataResponseJson = response.json()
@@ -93,7 +98,7 @@ class RedditAPI:
 
     def subredditTest(self):
         if len(self.subreddits) > 0:
-            self.getNewPostsToSubreddit(self.subreddits[-1])
+            self.getNewTopPostsToSubreddit(self.subreddits[-1])
 
 redditAPI = RedditAPI()
 redditAPI.redditAuth()
@@ -103,4 +108,9 @@ redditAPI.subredditTest()
 
 #redditAPI.printSubreddits()
 redditDB = RedditAccumulatorDatabase()
+
 redditDB.connect()
+redditDB.printTablesAvailable()
+count = redditDB.getArticleCount()
+if count:
+    pprint.pprint("Article count = " + str(count))
