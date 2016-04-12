@@ -14,7 +14,7 @@ class RedditAccumulator:
         self.redditAPI.redditRequestSubredditData()
         self.redditDB.connect()
 
-    def saveAverageScoreOfTopPostsIfState(self):
+    def saveAverageScoreOfTopPostsIfStale(self):
         subReddits = self.redditAPI.getSubreddits()
         for subReddit in subReddits:
 
@@ -62,6 +62,6 @@ class RedditAccumulator:
         pprint.pprint("Total posts Found: " + str(postCounter))
 
 redditAccumulator = RedditAccumulator()
-redditAccumulator.saveAverageScoreOfTopPostsIfState()
+redditAccumulator.saveAverageScoreOfTopPostsIfStale()
 redditAccumulator.saveInterestingPostsToDB()
 #redditAccumulator.redditDB.deleteAllArticles()
