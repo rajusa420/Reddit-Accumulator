@@ -66,4 +66,5 @@ class RedditAccumulator:
 redditAccumulator = RedditAccumulator()
 redditAccumulator.saveAverageScoreOfTopPostsIfStale()
 redditAccumulator.saveInterestingPostsToDB()
+#redditAccumulator.redditDB.deleteViewedArticles()
 #redditAccumulator.redditDB.deleteAllArticles()

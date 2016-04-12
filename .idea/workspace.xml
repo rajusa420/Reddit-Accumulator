@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7290436a-0adc-49d9-8935-2878d7631ad7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RedditAccumulator.py" afterPath="$PROJECT_DIR$/RedditAccumulator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RedditAccumulatorDatabase.py" afterPath="$PROJECT_DIR$/RedditAccumulatorDatabase.py" />
     </list>
@@ -19,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RedditAccumulator$RedditAccumulator.coverage" NAME="RedditAccumulator Coverage Results" MODIFIED="1460498640861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RedditAccumulator$RedditAccumulator.coverage" NAME="RedditAccumulator Coverage Results" MODIFIED="1460500148214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -37,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RedditAccumulator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RedditAccumulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RedditAccumulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+            <state relative-caret-position="232">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -81,31 +79,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedditAccumulatorDatabase.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RedditAccumulatorDatabase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RedditAccumulatorDatabase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+            <state relative-caret-position="195">
+              <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1460498640000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
-                <marker date="1460498640000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
-                <marker date="1460498640000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
-                <marker date="1460498640000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
-                <marker date="1460498640000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
-                <marker date="1460498640000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
-                <marker date="1460498640000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
-                <marker date="1460498640000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
-                <marker date="1460498640000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
-                <marker date="1460498640000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
-                <marker date="1460498640000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
-                <marker date="1460498640000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
-                <marker date="1460498640000" expanded="true" signature="2074:2106" placeholder="SELECT * FRO... RedditTopPosts" />
-                <marker date="1460498640000" expanded="true" signature="2074:2125" placeholder="SELECT * FRO... RedditTopPosts" />
-                <marker date="1460498640000" expanded="true" signature="2361:2420" placeholder="SELECT COUNT... RedditTopPosts" />
-                <marker date="1460498640000" expanded="true" signature="2683:2772" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
-                <marker date="1460498640000" expanded="true" signature="3094:3164" placeholder="SELECT lastu... SubredditAverageScore" />
-                <marker date="1460498640000" expanded="true" signature="3431:3495" placeholder="SELECT score... SubredditAverageScore" />
+                <marker date="1460500098000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
+                <marker date="1460500098000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
+                <marker date="1460500098000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
+                <marker date="1460500098000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
+                <marker date="1460500098000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
+                <marker date="1460500098000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
+                <marker date="1460500098000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
+                <marker date="1460500098000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
+                <marker date="1460500098000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
+                <marker date="1460500098000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
+                <marker date="1460500098000" expanded="true" signature="2060:2110" placeholder="DELETE FROM " />
+                <marker date="1460500098000" expanded="true" signature="2066:2097" placeholder="SELECT * FRO... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="2325:2357" placeholder="SELECT * FRO... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="2325:2376" placeholder="SELECT * FRO... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="2612:2671" placeholder="SELECT COUNT... RedditTopPosts" />
+                <marker date="1460500098000" expanded="true" signature="2934:3023" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
+                <marker date="1460500098000" expanded="true" signature="3345:3415" placeholder="SELECT lastu... SubredditAverageScore" />
+                <marker date="1460500098000" expanded="true" signature="3682:3746" placeholder="SELECT score... SubredditAverageScore" />
               </folding>
             </state>
           </provider>
@@ -170,8 +170,8 @@
       <list>
         <option value="$PROJECT_DIR$/RedditAPI.py" />
         <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/RedditAccumulator.py" />
         <option value="$PROJECT_DIR$/RedditAccumulatorDatabase.py" />
+        <option value="$PROJECT_DIR$/RedditAccumulator.py" />
       </list>
     </option>
   </component>
@@ -504,7 +504,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42612752" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36702955" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -548,24 +548,26 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1460498640000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
-            <marker date="1460498640000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
-            <marker date="1460498640000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
-            <marker date="1460498640000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
-            <marker date="1460498640000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
-            <marker date="1460498640000" expanded="true" signature="2074:2106" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2074:2125" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2361:2420" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2683:2772" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="3094:3164" placeholder="SELECT lastu... SubredditAverageScore" />
-            <marker date="1460498640000" expanded="true" signature="3431:3495" placeholder="SELECT score... SubredditAverageScore" />
+            <marker date="1460500098000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
+            <marker date="1460500098000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
+            <marker date="1460500098000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
+            <marker date="1460500098000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
+            <marker date="1460500098000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
+            <marker date="1460500098000" expanded="true" signature="2060:2110" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="2066:2097" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2357" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2376" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2612:2671" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2934:3023" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="3345:3415" placeholder="SELECT lastu... SubredditAverageScore" />
+            <marker date="1460500098000" expanded="true" signature="3682:3746" placeholder="SELECT score... SubredditAverageScore" />
           </folding>
         </state>
       </provider>
@@ -632,24 +634,26 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1460498640000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
-            <marker date="1460498640000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
-            <marker date="1460498640000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
-            <marker date="1460498640000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
-            <marker date="1460498640000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
-            <marker date="1460498640000" expanded="true" signature="2074:2106" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2074:2125" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2361:2420" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2683:2772" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="3094:3164" placeholder="SELECT lastu... SubredditAverageScore" />
-            <marker date="1460498640000" expanded="true" signature="3431:3495" placeholder="SELECT score... SubredditAverageScore" />
+            <marker date="1460500098000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
+            <marker date="1460500098000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
+            <marker date="1460500098000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
+            <marker date="1460500098000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
+            <marker date="1460500098000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
+            <marker date="1460500098000" expanded="true" signature="2060:2110" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="2066:2097" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2357" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2376" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2612:2671" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2934:3023" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="3345:3415" placeholder="SELECT lastu... SubredditAverageScore" />
+            <marker date="1460500098000" expanded="true" signature="3682:3746" placeholder="SELECT score... SubredditAverageScore" />
           </folding>
         </state>
       </provider>
@@ -771,40 +775,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RedditAccumulator.py">
+    <entry file="file://$PROJECT_DIR$/RedditAccumulatorDatabase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1460500098000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
+            <marker date="1460500098000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
+            <marker date="1460500098000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
+            <marker date="1460500098000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
+            <marker date="1460500098000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
+            <marker date="1460500098000" expanded="true" signature="2060:2110" placeholder="DELETE FROM " />
+            <marker date="1460500098000" expanded="true" signature="2066:2097" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2357" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2325:2376" placeholder="SELECT * FRO... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2612:2671" placeholder="SELECT COUNT... RedditTopPosts" />
+            <marker date="1460500098000" expanded="true" signature="2934:3023" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
+            <marker date="1460500098000" expanded="true" signature="3345:3415" placeholder="SELECT lastu... SubredditAverageScore" />
+            <marker date="1460500098000" expanded="true" signature="3682:3746" placeholder="SELECT score... SubredditAverageScore" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RedditAccumulatorDatabase.py">
+    <entry file="file://$PROJECT_DIR$/RedditAccumulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="232">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1460498640000" expanded="true" signature="648:724" placeholder="SELECT table... tables" />
-            <marker date="1460498640000" expanded="true" signature="1041:1055" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1069" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1071" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1041:1073" placeholder="DELETE FROM " />
-            <marker date="1460498640000" expanded="true" signature="1267:1305" placeholder="SELECT COUNT... " />
-            <marker date="1460498640000" expanded="true" signature="1267:1307" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1267:1309" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="1581:1609" placeholder="INSERT INTO " />
-            <marker date="1460498640000" expanded="true" signature="1581:1702" placeholder="INSERT INTO RedditTopPosts... " />
-            <marker date="1460498640000" expanded="true" signature="1581:1725" placeholder="INSERT INTO \&quot;RedditTopPosts\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="1821:1822" placeholder="INSERT INTO Cars... " />
-            <marker date="1460498640000" expanded="true" signature="2074:2106" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2074:2125" placeholder="SELECT * FRO... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2361:2420" placeholder="SELECT COUNT... RedditTopPosts" />
-            <marker date="1460498640000" expanded="true" signature="2683:2772" placeholder="INSERT INTO \&quot;SubredditAverageScore\&quot;... " />
-            <marker date="1460498640000" expanded="true" signature="3094:3164" placeholder="SELECT lastu... SubredditAverageScore" />
-            <marker date="1460498640000" expanded="true" signature="3431:3495" placeholder="SELECT score... SubredditAverageScore" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -55,6 +55,13 @@ class RedditAccumulatorDatabase:
             print('Error %s' % e)
             self.connection.rollback()
 
+    def deleteViewedArticles(self):
+        try:
+            self.cursor.execute("DELETE FROM \"RedditTopPosts\" where viewed = TRUE")
+            self.connection.commit()
+        except psycopg2.DatabaseError as e:
+            print('Error %s' % e)
+
     def getArticlesForSubreddit(self, subreddit):
         try:
             self.cursor.execute("SELECT * FROM \"RedditTopPosts\" where subreddit=%s", (subreddit,))
