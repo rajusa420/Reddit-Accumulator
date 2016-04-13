@@ -89,15 +89,15 @@ class RedditAccumulatorDatabase:
     def getAverageScoreLastUpdated(self, subreddit):
         try:
             self.cursor.execute("SELECT lastupdated FROM \"SubredditAverageScore\" where subreddit = %s", (subreddit,))
-            countRecord = self.cursor.fetchone()
-            return countRecord[0]
+            lastUpdatedRecord = self.cursor.fetchone()
+            return lastUpdatedRecord[0]
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)
 
     def getAverageScore(self, subreddit):
         try:
             self.cursor.execute("SELECT score FROM \"SubredditAverageScore\" where subreddit = %s", (subreddit,))
-            countRecord = self.cursor.fetchone()
-            return countRecord[0]
+            scoreRecord = self.cursor.fetchone()
+            return scoreRecord[0]
         except psycopg2.DatabaseError as e:
             print('Error %s' % e)
